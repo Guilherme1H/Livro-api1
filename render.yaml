@@ -4,7 +4,7 @@ services:
     runtime: docker
     region: oregon
     plan: free
-    # As linhas abaixo foram REMOVIDAS
-    # dockerContext: ./book-api
-    # dockerfilePath: ./book-api/Dockerfile
+    # FORÇANDO O DIRETÓRIO CORRETO VIA CÓDIGO
+    # Esta linha sobrepõe a configuração bugada da interface.
+    dockerBuildContext: .
     healthCheckPath: /q/health/live
