@@ -10,3 +10,4 @@ services:
     buildCommand: ./mvnw clean package -Dquarkus.package.type=uber-jar
     startCommand: java -jar target/quarkus-app/quarkus-run.jar
     healthCheckPath: /q/health/live
+    runtime: openjdk
