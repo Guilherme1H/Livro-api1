@@ -4,6 +4,7 @@ services:
     runtime: docker
     region: oregon
     plan: free
-    dockerContext: ./book-api
-    dockerfilePath: ./book-api/Dockerfile
+    # As linhas abaixo foram REMOVIDAS
+    # dockerContext: ./book-api
+    # dockerfilePath: ./book-api/Dockerfile
     healthCheckPath: /q/health/live
