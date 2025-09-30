@@ -1,12 +1,9 @@
 services:
   - type: web
     name: livro-api
-    # A linha abaixo foi alterada para 'docker'
     runtime: docker
     region: oregon
     plan: free
-    # Removemos o bloco envVars, buildCommand e startCommand
-    # O Dockerfile agora cuida de tudo isso.
+    dockerContext: ./book-api
+    dockerfilePath: ./book-api/Dockerfile
     healthCheckPath: /q/health/live
-    # Adicione o caminho do Dockerfile (opcional, mas bom para clareza)
-    dockerfilePath: ./Dockerfile
